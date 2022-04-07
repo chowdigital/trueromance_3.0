@@ -1,0 +1,967 @@
+// ===========================================================================
+// My Custom Styles
+// ===========================================================================
+//
+// Table of Contents:
+//
+//  1. Header Settings
+//  2. Navigation
+//  3. Footer
+//  4. Content Boxes
+//  4.a - Blog Roll
+//  5. Buttons
+//  6. Page Styles
+//  7. Typography
+//  8. Pricing Tables
+//  9. Contact Forms
+//  10. Home Page
+//  11. Single Post
+//  x. Miscellaneous
+
+
+// DARK SKIN
+$my-theme-primary: #65D19A;
+$my-theme-secondary: rgb(14,50,84);
+$my-dark-theme: mdb-dark-theme($my-theme-primary, $my-theme-secondary);
+@include mdb-theme($my-dark-theme);
+
+$white: #EBF6DE;
+$blue: #0e3254;
+$green: #65D19A;
+
+// ===========================================================================
+// 1. Header Settings
+// ===========================================================================
+
+
+// Settings for full height background
+html,
+body,
+#page,
+.view {
+    width: 100%; 
+  height:100%; 
+
+}
+ 
+  // Settings for navbar in edit mode
+body.logged-in {
+    
+    nav {
+        margin-top: 32px;
+    }
+}
+body {
+  
+    background: rgb(14,50,84);
+    background: radial-gradient(circle, rgba(14,50,84,1) 0%, rgba(6,33,56,1) 100%);
+    background: url("assets/img/cloudback.svg") no-repeat 0 0 fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: $blue;
+   
+
+    //background-repeat: repeat;
+}
+
+
+strong{
+    font-weight: 600;
+}
+
+// extra padding
+.pt-6 {
+    margin-top: 7rem;
+}
+.pb-6 {
+    margin-bottom: 7rem;
+}
+
+// ===========================================================================
+// 2. Navigation
+// ===========================================================================
+
+#bs-example-navbar-collapse-1{
+    width:100%;
+}
+.navbar {
+ 
+    padding-top: 20px;
+    padding-bottom: 20px;
+background: $blue-500;
+-webkit-box-shadow: none;
+box-shadow: none;
+
+ //background: url("assets/img/concrete.jpg")!important;
+}
+@include media-breakpoint-up(lg) {
+
+    .navbar {
+ 
+    background: transparent;
+
+    }
+}
+
+
+//navbar logo
+
+.navbar-brand img{
+    width: 150px;
+    max-height: auto;
+
+}
+#full-logo {
+    object-fit: contain;
+}
+
+
+.navbar.navbar-dark .breadcrumb .nav-item .nav-link:hover, .navbar.navbar-dark .navbar-nav .nav-item .nav-link:hover {
+    color: $primary;
+
+}
+.navbar.navbar-dark .navbar-nav .nav-item.active > .nav-link {
+    background:transparent;
+    color: $primary;
+}
+
+
+
+
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 0rem !important;
+    padding-left: 0rem !important;
+    margin-right: 2rem;
+    margin-left: 2rem;
+}
+
+// small Nav 
+li a {
+    font-weight: 400;
+    font-size: 0.8em;
+    font-style: normal;
+}
+
+code{
+    color: $primary;
+}
+
+.nav-link {
+    display: inline-block;
+    position: relative;
+    color: $primary;
+  }
+  
+  .nav-link:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: $primary;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .nav-link:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+
+// Navbar Scroll Animation
+
+
+
+/* Color of the navbar AFTER scroll */
+.navbar-scrolled {
+    background: $blue-500;
+}
+
+/* An optional height of the navbar AFTER scroll */
+.navbar.navbar-scroll.navbar-scrolled {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+// ===========================================================================
+// 3. Footer
+// ===========================================================================
+
+      
+//remove at bottom of footer
+.page{
+    margin: 0;
+    padding-top:0px;
+}
+.navbar-toggler {
+    background-color: transparent !important;
+}
+.entry-title {
+    margin: 1em 0em;
+}
+
+
+
+footer {
+    padding-top: 4rem;
+    background-color: #0a1d2e;
+    .md-form label {
+        color: $black;
+    }
+}
+
+
+.no-line-break{
+    margin-bottom: 0rem;
+}
+
+.post-header{
+    margin-top: 8rem;
+}
+
+
+//footer 
+footer {
+    margin-top: 0;
+    
+}
+.dark-background {
+    background: $primary;
+}
+.black-background {
+    margin-top:2em;
+    background: #000;
+}
+@media (min-width: 768px) {
+    .text-footer-responsive{
+        text-align: right;
+    }
+}
+
+// fix spacing issue text on footer
+.fc-wide{
+    padding-left: calc(var(--bs-gutter-x) / 2);
+}
+// footer
+
+//remove bullet points
+.contact-icons li{
+     list-style-type:none
+
+}
+
+// ===========================================================================
+// 4. Content Boxes
+// ===========================================================================
+
+.about-box{
+    background-color: $white;
+    padding:2em;
+    color: $blue;
+}
+.white-content-box {
+    background-color: $primary;
+    width: 100%;
+    padding: 2rem;
+    color: $white;
+}
+
+.contact-box {
+
+    width: 100%;
+    padding: 2rem;
+ 
+    color: $white;
+}
+@include media-breakpoint-up(lg) {
+    .white-content-box {
+        width: 50%;
+    }
+  }
+// WEB CARDS
+
+.web-card {
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.web-card .card-body{
+    background-color: #0a1d2e;
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+}
+.web-card .bg-image{
+    border-radius: 0.25rem;
+}
+
+.green-box{
+    background-color: $green;
+    color: $blue;
+}
+
+// 4a. Blog Roll
+// ===========================================================================
+.square-img {
+    padding-bottom: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+// Set size for thumbnail images
+.thumb-wrapper{
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+   
+    img {
+        object-fit: cover;
+    }
+
+}
+.blog-content-box{
+    color: $white;
+  
+}
+.blog-content-box a h3{
+    color: $white;
+}
+.blog-content-boxa h3{
+    color: $green;
+}
+.blog-post-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+.blog-post-list{
+    flex-basis: 100%;
+}
+.event-post-list{
+    flex-basis: 100%;
+}
+
+
+@include media-breakpoint-up(lg) {
+ 
+    .blog-post-list{
+        flex-basis: 30%;
+    }
+    .event-post-list{
+        flex-basis: 45%;
+    }
+}
+
+
+// ===========================================================================
+// 5. Buttons
+// ===========================================================================
+
+.btn-green, .btn-green:hover{
+    padding: 0.5em 3em;
+    border: 2px $blue solid;
+    color: $blue;
+    background-color: $green;
+}
+//Resize Navbar buttons
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+.btn-80 {
+    width: 80%
+}
+
+// ===========================================================================
+// 6. Page Styles
+// ===========================================================================
+
+.clipped{
+    clip-path: inset(5px 5px 5px 5px);
+ 
+}
+
+
+//shape photo blocks
+
+@include media-breakpoint-down(sm){
+    .square{
+        content: "";
+        display: block;
+        padding-top: 100%;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .row-of-squares:before{
+        content: "";
+        display: block;
+        padding-top: 50%;
+    }
+
+}
+
+@include media-breakpoint-up(lg) {
+    .row-of-squares:before{
+        content: "";
+        display: block;
+        padding-top: 25%;
+    }
+}
+
+
+.wide-video{
+    width:100%;
+    height: 100%;
+}
+
+.photo-link{
+    background-color: $primary;
+    transition: 0.5s ease-out;
+    padding: 2em;
+    text-align: center;
+    h2{
+        color: $blue-900;
+        transition: 0.5s ease-out;
+    }
+}
+.bg-pink {
+    background: $pink-500;
+}
+.bg-orange {
+    background: $orange-500;
+}
+.bg-yellow {
+    background: $yellow-500;
+}
+.bg-red {
+    background: $red-500;
+}
+
+
+
+
+
+// cancel padding on video in photography grid 
+.gallery-link .row > * {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+// re-order colum blocks
+@media (max-width: 599px) {
+    .switch-sml{
+        flex-flow: column-reverse;
+    }
+}
+
+// fix image resizing of .gifs
+.wp-block-image img {
+    max-width: 100%;
+    height: auto;
+}
+// ===========================================================================
+//  7. Typography
+// ===========================================================================
+
+body, p {
+    font-family: montserrat, sans-serif;
+}
+
+h1{
+    font-size: 3em;
+  }
+h2{
+
+    font-size: 2em;
+}
+h3, h4 {
+    font-weight: bold;
+}
+.page-title-text{
+    font-family: sharktooth, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+// Block Quote 
+.wp-block-quote
+{
+    margin-left: 0%;
+    p {
+ 
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5em;
+    font-weight: bold;
+    }
+    cite {
+        font-weight:bold;
+        font-style: normal;
+        clear: both; 
+        display: block; 
+        position: relative;
+        line-height: 2em;
+    
+    }
+    cite::before{ 
+        font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f005    \f005     \f005      \f005     \f005";
+        clear: both; 
+        display: block; 
+        position: relative;
+       
+
+   
+    }
+    
+}
+.wp-block-quote::before{
+    font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f10d";
+    font-size: 2em;
+}
+
+@include media-breakpoint-up(lg) {
+    .wp-block-quote
+    {
+        margin-left: 50%;
+    }
+}
+
+// block quote end
+
+//custom link colour
+a {
+    color: $primary;
+ 
+}
+a:hover {
+    color: $primary;
+}
+// Page Title Resizing
+
+.page-title-text{
+
+    font-size: 2em;
+    color: $white;
+  }
+.cloudIntro{
+    min-height: 50vh;
+  
+}
+  @include media-breakpoint-up(sm) { 
+  .page-title-text{
+
+    font-size: 3em;
+  
+  
+  }
+}
+  @include media-breakpoint-up(md) { 
+    .page-title-text{
+  
+      font-size: 2em;
+     
+    }
+   }
+  
+  
+  
+  @include media-breakpoint-up(xl) { 
+    .page-title-text{
+  
+      font-size: 4em;
+    
+    }
+   }
+
+   
+// ===========================================================================
+//  8. Pricing Tables
+// ===========================================================================
+
+
+.pricing-table .card {
+   color: $black;
+   margin: 1em;
+   -webkit-transition: all 0.2s;
+   -o-transition: all 0.2s;
+   transition: all 0.2s;
+   -webkit-border-radius: 15px;
+   border-radius: 0px; }
+   .pricing-table .card .card-title {
+     font-size: 1rem;
+     letter-spacing: .2rem;
+     font-weight: 500; }
+   .pricing-table .card .card-price {
+     font-size: 2.7rem; }
+     .pricing-table .card .card-price .term {
+       font-size: .875rem; }
+   .pricing-table .card .fa-ul li:not(:last-child) {
+     margin-bottom: 1rem; }
+ 
+
+
+     .pricing-table .my-4 {
+       border-top: 1px solid $white;
+
+     }
+
+     .pricing-table  .card{
+       border: 10px solid #fff;
+   
+   }
+   .pricing-table .card-body{
+   .my-4 {
+       border-top: 1px solid $primary;
+
+     }
+}
+.pricing-table .card-highlight{
+   border: 10px solid $primary;
+
+
+}
+
+.pricing-table .card-body-dark{
+   background-color: $primary;
+   border: 5px solid $white;
+   padding:5px;
+}
+.pricing-table .card-body-inner-dark{
+   background-color: $primary;
+   .my-4 {
+       border-top: 1px solid $white;
+
+     }
+}
+
+
+// ===========================================================================
+//  9. Contact Forms
+// ===========================================================================
+
+#status{
+    color: $red-500;
+    font-size: 1.2em;
+}
+
+// ===========================================================================
+//  10. HomePage
+// ===========================================================================
+
+
+@include media-breakpoint-up(md) { 
+  
+.container-sticky {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+  
+ 
+  
+  }
+  
+  .sticky-child {
+
+    position: -webkit-sticky;
+    position: sticky;
+    top:0em;
+    max-width: 400px;
+  }
+  .sticky-contact-form{
+   
+    h3, .md-form > label{
+        color: $primary;
+    }
+    
+  }
+  .sticky-contact-form, .full-fat-content {
+     margin-top: 40px;
+      padding-top:2em;
+ 
+  }
+
+  
+ .screen-height{
+     min-height: 100vh;
+ }
+
+ canvas {
+     width:100%;
+
+
+ }
+
+   }
+
+ // start homepage Cloudworld 
+
+ .cloudWorld{
+     height: 100%;
+ }
+ #cloudWorld {
+    object-fit: fill;
+    animation: MoveUpDown 6s linear infinite;
+    position: relative;
+    transition-timing-function: ease;
+    margin: 4em;
+   
+ }
+
+ @keyframes MoveUpDown {
+    0%, 100% {
+      bottom: 0px;
+      left: 10px;
+
+    }
+    20% {
+        bottom: 15px;
+        left: 5px;
+    }
+    40% {
+        bottom: 25px;
+        left: 0px;
+      
+    }
+    60%{
+        bottom: 15px;
+        left: 10px;
+    }
+    80%{
+        bottom: 6px;
+        left: 20px;
+    }
+  }
+
+
+ // End Homepage Cloudworld
+// Overide Nav Quirks START
+
+.icon-50{
+    width: 50%;
+}
+
+// ===========================================================================
+// 11. Single Post
+// ===========================================================================
+
+.page-img-header{
+    height: 500px;
+    height: 60vh;
+ 
+}
+.overlap-cover{
+    margin-top: -30vh;
+}
+.single-post-main{
+    margin-top: -100px;
+    margin-top: -30vh;;
+}
+
+
+.single-post {
+    height: 150px;
+}
+
+.post-thumb {
+    height: 400px;
+    width: 400px;
+    margin-right:auto;
+    margin-left:auto;
+    position: relative;
+    z-index:3;
+}
+
+@include media-breakpoint-up(lg) {
+    .post-thumb  {
+        margin-right:5em;
+   
+    }
+}
+.default-content-box {
+    background-color: $white;
+    color: $blue;
+    padding: 5em;
+
+
+}
+.overlap-post {
+    position: relative;
+    z-index: 1;
+    margin-top: -200px;
+    padding-top: 250px;
+}
+
+.box-content-wp{
+    border: 3px solid $blue !important;
+    padding:1.5em;
+    margin:1em;
+}
+// ===========================================================================
+// 12. Meet Work Eat
+// ===========================================================================
+.page-id-578,  .page-id-351, .page-id-356 {
+   
+        .navbar{
+            background-color: #0e3254 !important;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            .navbar-brand img{
+                width: 100px;
+            }
+            .nav-item{
+                padding:0;
+            }
+        }
+
+    
+    }
+.mwe-img-header    {    
+        height: 400px;
+     
+    
+}
+.mwe-main{
+    margin-top: -200px;
+}
+.mwe-box{
+    background-color: #fff;
+    color: #000;
+    padding: 2em;
+    margin-top:2em;
+    a{
+        color: $blue !important;
+    }
+    a:hover{
+        color: $green !important;
+    }
+}
+@include media-breakpoint-up(md) { 
+    .nav-item{
+        padding-top: 0em;
+    }
+    #navbarSupportedContent{
+        background: transparent;
+    }
+}
+
+@keyframes change-background {
+    0% {
+        background-color: #14B1D1;
+    }
+    5% {
+        background-color: #FD636B;
+    }
+    20% {
+        background-color: #FD636B;
+    }
+    25% {
+        background-color: #FFBA00;
+    }
+    40% {
+        background-color: #FFBA00;
+    }
+    45% {
+        background-color: #38E9B2;
+    }
+    60% {
+        background-color: #38E9B2;
+    }
+    65% {
+        background-color: #6967CF;
+    }
+    80% {
+        background-color: #6967CF;
+    }
+    85% {
+        background-color: #14B1D1;
+    }  
+    100% {
+        background-color: #14B1D1;
+    }
+  }
+.mwe-background{
+  animation: change-background 20s linear infinite;
+  margin-right:0em;
+  position: relative;
+  z-index: 3;
+}
+
+.mwe-form .form-outline{
+    border: #000;
+    color:#000;
+}
+
+.modal-header{
+    background-color: $green;
+}
+.modal-body{
+    background-color: $blue;
+}
+.modal-title{
+    font-size:2em;
+    font-family: sharktooth, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+
+}
+
+.btn-modal{
+    position:fixed;
+    color: #fffe;
+    font-size:1em;
+    font-family: sharktooth, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    background-color: $green;
+    padding:1em;
+      left:3%;
+      right:3%;
+      display:block;
+      width: 94%;
+      bottom: 3px;
+      z-index:999999999;
+}
+// ===========================================================================
+//  x. Miscellaneous
+// ===========================================================================
+
+
+
+// Set size for thumbnail images
+//.thumb-wrapper{
+ //   width: 100%; 
+ //overflow: hidden;
+   //  img {
+ //       object-fit: cover;
+//}
+//}
+
+
+code {
+
+    color: #000;
+}
+
+
+
+
+
+// Fix Nav
+.navbar-nav{
+    width:100%;
+}
+
+#navbarSupportedContent{
+    background: rgb(14,50,84);
+    width: 100%
+}
+.nav-item{
+    padding-top: 2em;
+}
