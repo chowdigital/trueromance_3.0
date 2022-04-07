@@ -1,5 +1,18 @@
 <?php /* Template Name: Home 1*/ get_header(); ?>
 
+<!-- The video -->
+<style>/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}</style>
+<video autoplay muted loop id="myVideo">
+  <source src="<?php echo get_template_directory_uri(); ?>/assets/img/video/sky.mp4" type="video/mp4">
+</video>
+
 <div class="container ">
     <div class="row screen-height flex-md-row-reverse justify-content-center">
 
