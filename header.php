@@ -40,7 +40,7 @@
     <div class="container">
     	<!-- Brand and toggle get grouped for better mobile display -->
 	<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>">
-  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/cloudsdale_logo.svg" alt="Cloudsdale Logo" style>
+  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-1.svg" alt="True romance Logo" style>
 
 		</a>
       <button

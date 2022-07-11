@@ -20,14 +20,16 @@
 
 
 // DARK SKIN
-$my-theme-primary: #65D19A;
+
+$my-theme-primary: #fff;
 $my-theme-secondary: rgb(14,50,84);
 $my-dark-theme: mdb-dark-theme($my-theme-primary, $my-theme-secondary);
 @include mdb-theme($my-dark-theme);
 
 $white: #EBF6DE;
 $blue: #0e3254;
-$green: #65D19A;
+$pink: #ff82b7;
+
 
 // ===========================================================================
 // 1. Header Settings
@@ -90,7 +92,7 @@ strong{
  
     padding-top: 20px;
     padding-bottom: 20px;
-background: $blue-500;
+background: $pink;
 -webkit-box-shadow: none;
 box-shadow: none;
 
@@ -109,7 +111,7 @@ box-shadow: none;
 //navbar logo
 
 .navbar-brand img{
-    width: 150px;
+    width: 250px;
     max-height: auto;
 
 }
@@ -163,7 +165,7 @@ code{
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: $primary;
+    background-color: $pink;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
   }
@@ -180,7 +182,7 @@ code{
 
 /* Color of the navbar AFTER scroll */
 .navbar-scrolled {
-    background: $blue-500;
+    background: $pink;
 }
 
 /* An optional height of the navbar AFTER scroll */
@@ -655,6 +657,77 @@ a:hover {
 //  10. HomePage
 // ===========================================================================
 
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.collage-car{
+  width: 400px;
+  top: 480px;
+  position: absolute;
+}
+.collage-sun{
+  width: 300px;
+  bottom: auto;
+  position: absolute;
+  animation-delay: 0.1s;
+  top: 220px;
+}
+.collage-tree{
+  width: auto;
+  height: 400px;
+  bottom: 100px;
+  position: absolute;
+  animation-delay: 0.2s;
+  top: 150px;
+
+}
+.collage-showing{
+  width: auto;
+  height: 400px;
+  position: absolute;
+  animation-delay: 0.3s;
+  top: 200px;
+
+}
+.collage-glasses{
+  width: auto;
+  height: 400px;
+  position: absolute;
+  animation-delay: 0.4s;
+  top: 200px;
+
+}
+
+@include media-breakpoint-up(lg) {
+    .collage-car{
+        width: 800px;
+        bottom: 50px;
+        top:auto;
+      }
+      .collage-sun{
+        width: 600px;
+        top:auto;
+        bottom: 150px;
+      }
+      .collage-tree{
+        height: 800px;
+        top:auto;
+    }
+      .collage-showing{
+        height: 800px;
+        top:90px;
+      }
+      .collage-glasses{
+        height: 800px; 
+        top:90px;
+      }
+
+}
 
 @include media-breakpoint-up(md) { 
   
@@ -710,7 +783,13 @@ a:hover {
     animation: MoveUpDown 6s linear infinite;
     position: relative;
     transition-timing-function: ease;
-    margin: 4em;
+   
+ }
+ #cloudWorld2 {
+    object-fit: fill;
+    animation: MoveUpDown2 6s linear infinite;
+    position: relative;
+    transition-timing-function: ease;
    
  }
 
@@ -739,6 +818,33 @@ a:hover {
     }
   }
 
+  @keyframes MoveUpDown2 {
+    0%, 100% {
+      bottom: 6px;
+      left: 2px;
+
+    }
+    20% {
+     
+        bottom: 15px;
+        left: 3px;
+    }
+    40% {
+     
+        bottom: 4px;
+      left: 4px;
+    }
+    60%{
+     
+
+        bottom: 5px;
+        left: 3px;
+    }
+    80%{
+        bottom: 1px;
+        left: 2px;
+    }
+  }
 
  // End Homepage Cloudworld
 // Overide Nav Quirks START
